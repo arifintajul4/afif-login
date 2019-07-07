@@ -8,9 +8,6 @@
 		<li class="nav-item">
 			<a class="nav-link active" id="nilai-tab" data-toggle="tab" href="#nilai" role="tab" aria-controls="nilai" aria-selected="true">Nilai Preferensi</a>
 		</li>
-		<li class="nav-item">
-	    	<a class="nav-link" id="jarak-tab" data-toggle="tab" href="#jarak" role="tab" aria-controls="jarak" aria-selected="false">Jarak Solusi</a>
-		</li>
 	</ul>
 	<div class="tab-content" id="myTabContent">
 		<div class="tab-pane fade show active" id="nilai" role="tabpanel" aria-labelledby="nilai-tab">
@@ -32,9 +29,6 @@
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		</div>
-		<div class="tab-pane fade" id="jarak" role="tabpanel" aria-labelledby="jarak-tab">
-			
 		</div>
 	</div>
 

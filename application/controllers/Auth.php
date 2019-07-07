@@ -13,8 +13,6 @@ class auth extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
-
-
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Login';
             $this->load->view('templates/auth_header', $data);
@@ -76,6 +74,7 @@ class auth extends CI_Controller
     {
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', ['is_unique' => 'Email sudah di buat']);
+
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Registrasi';
             $this->load->view('templates/auth_header', $data);
@@ -90,7 +89,6 @@ class auth extends CI_Controller
                 'role_id' => 2,
                 'is_active' => 1,
                 'date' => time()
-
             ];
 
             $this->db->insert('user', $data);
