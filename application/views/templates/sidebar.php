@@ -12,6 +12,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider ">
 
+    <?php if($this->session->userdata('role_id')==1): ?>
     <!----- menu ----->
     <div class="sidebar-heading">
         Admin
@@ -26,6 +27,8 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider ">
+
+    <?php endif;?>
 
     <!----- menu ----->
     <div class="sidebar-heading">
@@ -53,6 +56,7 @@
             </a>
         </li>
 
+    <?php if($this->session->userdata('role_id')==2): ?>
     <!-- Divider -->
     <hr class="sidebar-divider ">
 
@@ -85,6 +89,7 @@
                 <span>Hasil Topsis</span>
             </a>
         </li>
+    <?php endif; ?>
     <hr class="sidebar-divider pb-0">
 
     <li class="nav-item">
