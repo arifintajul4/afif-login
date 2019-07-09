@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jul 2019 pada 05.49
+-- Waktu pembuatan: 09 Jul 2019 pada 10.06
 -- Versi server: 10.1.33-MariaDB
 -- Versi PHP: 7.2.6
 
@@ -66,10 +66,10 @@ CREATE TABLE `kriteria` (
 --
 
 INSERT INTO `kriteria` (`id`, `nama_kriteria`, `bobot`, `poin1`, `poin2`, `poin3`, `poin4`, `poin5`, `sifat`) VALUES
-(9, 'Harga Tanah', 4, 1, 2, 3, 4, 5, 'Benefit'),
-(10, 'UMR', 5, 1, 2, 3, 4, 5, 'Benefit'),
-(11, 'Pajak', 5, 1, 2, 3, 4, 5, 'Benefit'),
-(12, 'Suplay Air', 3, 1, 2, 3, 4, 5, 'Benefit');
+(9, 'Keuntungan', 4, 1, 2, 3, 4, 5, 'Benefit'),
+(10, 'Permintaan', 5, 1, 2, 3, 4, 5, 'Benefit'),
+(11, 'Ketersediaan', 5, 1, 2, 3, 4, 5, 'Benefit'),
+(12, 'Ketahanan', 3, 1, 2, 3, 4, 5, 'Benefit');
 
 -- --------------------------------------------------------
 
@@ -140,9 +140,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(5, 'Administrator', 'arifintajul4@gmail.com', 'default.jpg', '$2y$10$nXnrqGQTjpvg58OtOB/N.evYQjVlz7KIW37oUSQSQ2EgNMD0Dgrzq', 1, 1, 1552120289),
+(5, 'Administrator', 'arifintajul4@gmail.com', 'jakatikus-icon.png', '$2y$10$4pXWHCxnOPNmnGgofFJa3Oi6qtkdj52hxPzEuhXlJ3FnRxmPaCWOS', 1, 1, 1552120289),
 (6, 'Doddy Ferdiansyah', 'doddy@gmail.com', 'profile.jpg', '$2y$10$FhGzXwwTWLN/yonJpDLR0.nKoeWlKWBoRG9bsk0jOAgbJ007XzeFO', 2, 1, 1552285263),
-(11, 'Sandhika Galih', 'sandhikagalih@gmail.com', 'default.jpg', '$2y$10$0QYEK1pB2L.Rdo.ZQsJO5eeTSpdzT7PvHaEwsuEyGSs0J1Qf5BoSq', 2, 1, 1553151354);
+(11, 'Sandhika Galih', 'tes@gmail.com', 'default.jpg', '$2y$10$0QYEK1pB2L.Rdo.ZQsJO5eeTSpdzT7PvHaEwsuEyGSs0J1Qf5BoSq', 2, 1, 1553151354),
+(12, 'User', 'user@gmail.com', 'default.jpg', '$2y$10$8phn/lhmiU.M/vAlAnvwU.pFB8VrzWRxMsj5q9xiz9IJ7dmbSCmH.', 2, 1, 1562503237);
 
 --
 -- Indexes for dumped tables
@@ -204,13 +205,13 @@ ALTER TABLE `nilai_matrik`
 -- AUTO_INCREMENT untuk tabel `nilai_preferensi`
 --
 ALTER TABLE `nilai_preferensi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

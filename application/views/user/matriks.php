@@ -43,7 +43,7 @@
                 <thead>
                     <?php $num_kriteria = $this->db->get('kriteria')->num_rows(); ?>
                     <tr>
-                        <th rowspan="2">No</th>
+                        <th rowspan="2"><center>No</center></th>
                         <th rowspan="2">Nama</th>
                         <th colspan="<?= $num_kriteria ?>"><center>Kriteria</center></th>
                     </tr>

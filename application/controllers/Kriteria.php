@@ -30,7 +30,7 @@ class Kriteria extends CI_Controller
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);
             $this->load->view('templates/topbar', $data);
-            $this->load->view('admin/kriteria', $data);
+            $this->load->view('user/kriteria', $data);
             $this->load->view('templates/footer');
         }else{ 
             $this->Kriteria_models->storeKriteria();

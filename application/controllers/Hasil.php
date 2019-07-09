@@ -25,7 +25,7 @@ class Hasil extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('admin/hasil_topsis', $data);
+        $this->load->view('user/hasil_topsis', $data);
         $this->load->view('templates/footer');
         $this->Preferensi_models->hapusNilaiPreferensi();
     }

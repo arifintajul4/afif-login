@@ -5,26 +5,14 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $tittle; ?></h1>
     <hr>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <?= $this->session->flashdata('message'); ?>
-            <form action="" method="post">
-                <label for="nama">Nama Alternatif</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="nama" autocomplete="off" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit" id="button-addon2">Tambah</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+            <button class="btn btn-primary mb-3 tambahAlternatif" data-toggle="modal" data-target="#editModals">Tambah Alternatif</button>
         
-    </div>
-    <div class="row">
-        <div class="col-md-6 mb-2">
             <table class="table table-hover table-bordered" id="datatable">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th><center>No</center></th>
                         <th>Nama Alternatif</th>
                         <th><center>Aksi</center></th>
                     </tr>
