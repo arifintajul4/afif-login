@@ -89,7 +89,17 @@
                 <span>Hasil Topsis</span>
             </a>
         </li>
+    
+    <hr class="sidebar-divider">
+
+        <!---submenu--->
+        <li class="nav-item <?php if($tittle == "Kelola Foto"){echo 'active';} ?>">
+            <a class="nav-link pt-0 " href="<?= base_url('foto'); ?>"><i class="fas fa-camera-retro"></i>
+                <span>Galery</span>
+            </a>
+        </li>
     <?php endif; ?>
+
     <hr class="sidebar-divider pb-0">
 
     <li class="nav-item">
