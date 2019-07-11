@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jul 2019 pada 10.06
+-- Waktu pembuatan: 11 Jul 2019 pada 05.51
 -- Versi server: 10.1.33-MariaDB
 -- Versi PHP: 7.2.6
 
@@ -121,6 +121,27 @@ CREATE TABLE `nilai_preferensi` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_foto`
+--
+
+CREATE TABLE `tbl_foto` (
+  `id_foto` int(11) NOT NULL,
+  `foto` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_foto`
+--
+
+INSERT INTO `tbl_foto` (`id_foto`, `foto`) VALUES
+(2, '280958_e5fe0a01-1baf-4dc0-9ef8-3de5ac1df8f2_973_9731.jpg'),
+(6, '1901108_896144d4-5c12-44c2-a789-2a4bf95efa07_864_8641.jpg'),
+(9, 'images.jpg'),
+(10, 'barang1.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `user`
 --
 
@@ -140,9 +161,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(5, 'Administrator', 'arifintajul4@gmail.com', 'jakatikus-icon.png', '$2y$10$4pXWHCxnOPNmnGgofFJa3Oi6qtkdj52hxPzEuhXlJ3FnRxmPaCWOS', 1, 1, 1552120289),
-(6, 'Doddy Ferdiansyah', 'doddy@gmail.com', 'profile.jpg', '$2y$10$FhGzXwwTWLN/yonJpDLR0.nKoeWlKWBoRG9bsk0jOAgbJ007XzeFO', 2, 1, 1552285263),
-(11, 'Sandhika Galih', 'tes@gmail.com', 'default.jpg', '$2y$10$0QYEK1pB2L.Rdo.ZQsJO5eeTSpdzT7PvHaEwsuEyGSs0J1Qf5BoSq', 2, 1, 1553151354),
+(5, 'Administrator', 'admin@gmail.com', 'jakatikus-icon.png', '$2y$10$vdfY9G6dlMozGq5OZ/e8iuwG7ZWv98VSJVHdJvPe5ipJmRK2yOnRq', 1, 1, 1552120289),
 (12, 'User', 'user@gmail.com', 'default.jpg', '$2y$10$8phn/lhmiU.M/vAlAnvwU.pFB8VrzWRxMsj5q9xiz9IJ7dmbSCmH.', 2, 1, 1562503237);
 
 --
@@ -172,6 +191,12 @@ ALTER TABLE `nilai_matrik`
 --
 ALTER TABLE `nilai_preferensi`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tbl_foto`
+--
+ALTER TABLE `tbl_foto`
+  ADD PRIMARY KEY (`id_foto`);
 
 --
 -- Indeks untuk tabel `user`
@@ -205,7 +230,13 @@ ALTER TABLE `nilai_matrik`
 -- AUTO_INCREMENT untuk tabel `nilai_preferensi`
 --
 ALTER TABLE `nilai_preferensi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_foto`
+--
+ALTER TABLE `tbl_foto`
+  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
