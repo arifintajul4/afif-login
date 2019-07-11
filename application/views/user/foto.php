@@ -13,10 +13,12 @@
 	<?php foreach($foto as $f): ?>
 		<div class="col-md-3">
 
-			<div class="mb-2">
-				<a href="<?= base_url('assets/img/galery/').$f['foto']; ?>">
-					<img src="<?= base_url('assets/img/galery/').$f['foto']; ?>" class="img-thumbnail img-responsive shadow" style="height: 250px; width: 400px;">
-				</a>
+			<div class="mb-2 gambar">
+				<img src="<?= base_url('assets/img/galery/').$f['foto']; ?>" class="img-thumbnail img-responsive shadow" style="height: 250px; width: 400px;">
+				<div class="aksi">
+					<a href="<?= base_url('assets/img/galery/').$f['foto']; ?>" class="badge badge-success"><i class="fas fa-search-plus"></i></a>
+					<a href="<?= base_url('foto/hapus/').$f['id_foto'].'/'.$f['foto']; ?>" class="badge badge-danger"><i class="far fa-trash-alt"></i></a>
+				</div>
 			</div>
 
 		</div>

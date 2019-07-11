@@ -91,4 +91,13 @@ class Foto extends CI_Controller
     		redirect('foto');
     	}
     }
+
+    public function hapus($id, $judul)
+    {
+
+    	$this->Foto_models->hapusFoto($id);
+    	unlink(FCPATH . 'assets/img/galery/' . $judul);
+    	$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Berhasil Hapus Foto!!</div>');
+        redirect('foto');
+    }
 }

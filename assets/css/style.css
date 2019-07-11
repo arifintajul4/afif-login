@@ -1,0 +1,10 @@
+.gambar {
+	position: relative;
+}
+
+.gambar .aksi{
+	position: absolute;
+	margin: 10px 10px;
+	top: 0;
+	right: 0;
+}

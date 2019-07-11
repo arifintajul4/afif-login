@@ -17,4 +17,10 @@ class Foto_models extends CI_Model
 	{
 		return $this->db->get('tbl_foto', $limit, $start)->result_array();
 	}
+
+	public function hapusFoto($id)
+	{
+		$this->db->where('id_foto', $id);
+		$this->db->delete('tbl_foto');
+	}
 }
